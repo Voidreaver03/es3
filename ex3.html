@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>ex 3</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <h1>ex 3</h1>
+        <h2>Hai vinto!</h2>
+        
+        <table id="myT" style="border: 1px solid">
+            <thead>
+                <tr style="border: 2px solid;">
+                    <td style="border: 1px solid;">N</td>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        Inserisci un numero: <input id="num" type="text"></input>
+        <h1></h1>
+        <button id="btn1">add</button>
+
+        <script>
+            $("body").append($("<label id='lbl1'></label>"))
+            $("#btn1").click(function () {
+                $("tbody").append("<tr style='border: 1px solid';><td style='border: 1px solid'>" + $("#num").val() + "</td></tr>");
+                $("#num").val("");
+            })
+        </script>
+    </body>
+</html>
